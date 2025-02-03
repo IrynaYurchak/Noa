@@ -1,0 +1,32 @@
+@import '../../shared/styles/variables';
+.menu-dialog {
+  background-color: $clr-background;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрує елементи */
+}
+
+.menu-item {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px 0;
+  max-width: 180px; /* Обмежує ширину */
+  max-height: 200px; /* Обмежує висоту */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Центрує контент */
+  text-align: center;
+  background-color: $clr-background;
+}
+
+.menu-item img {
+  object-fit: cover; /* Запобігає розтягуванню */
+}
+
+.menu-item:hover {
+  background-color: $clr-border;
+}

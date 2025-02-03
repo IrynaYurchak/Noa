@@ -1,0 +1,131 @@
+@import 'app/shared/styles/variables';
+.global-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.96)),
+    url('/assets/img/pattern.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Контент сторінок */
+.main-content {
+  position: relative;
+  z-index: 1; /* Забезпечує, що вміст поверх фону */
+  min-height: 100vh; /* Висота контенту на всю сторінку */
+}
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Thin.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Light.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Regular.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Medium.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Bold.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  src: url('/assets/fonts/CeraRoundPro-Black.woff2') format('woff2'),
+  url('/assets/fonts/CeraRoundPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Cera Round Pro', sans-serif;
+}
+.menu-dialog {
+  width: 1200px !important;
+  min-height: 500px !important;
+  background-color: #151515  !important;
+  border-radius: 10px !important;
+  color: black !important;
+
+}
+
+/* Стилі для модального вікна *
+
+ */
+/* Анімація появи модального вікна */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Стилі для самого діалогу */
+.menu-dialog {
+  width: 1000px;
+  max-width: 90vw !important; /* Не більше 90% ширини вікна */
+  min-height: 500px !important;
+  border-radius: 5px !important;
+  background-color: #151515 !important;
+  color: #fff !important;
+  animation: slideUp 0.1s ease-in-out;
+
+}
+
+/* Переконайтеся, що тло всередині модалки не має білих країв */
+.menu-dialog .mat-mdc-dialog-container {
+  background-color: #151515 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
+.menu-dialog .mat-mdc-dialog-surface {
+  background-color: #151515 !important;
+  box-shadow: none !important; /* Прибирає тінь */
+  border-radius: 5px !important;
+}
+
+html, body {
+  overflow: auto !important;
+}

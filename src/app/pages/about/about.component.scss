@@ -1,0 +1,52 @@
+
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+/* Скидання початкових стилів браузера */
+h1, h2, h3, p, ul, li {
+  margin: 0; /* Прибираємо всі зовнішні відступи */
+  padding: 0; /* Прибираємо додаткові внутрішні відступи, якщо є */
+}
+
+/* Основний контейнер */
+.container {
+  color: #fff;
+  font-size: 16px; /* Базовий розмір шрифту */
+  line-height: 1.5; /* Універсальний міжрядковий інтервал */
+}
+
+/* Заголовки */
+.title-main {
+  font-size: 42px;
+  letter-spacing: 10px;
+  margin: 60px 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Абзаци */
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Списки */
+ul {
+  padding-left: 17px;
+}
+
+ul li {
+  color: $clr-text;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Маркери списків */
+ul li::marker {
+  color: $primary;
+}
+
+

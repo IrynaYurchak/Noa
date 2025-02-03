@@ -1,0 +1,168 @@
+@import '../../shared/styles/variables';
+
+.container {
+  color: #fff;
+}
+
+h2 {
+  letter-spacing: 10px;
+  font-size: 42px;
+  line-height: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  margin: 40px auto;
+}
+
+mat-icon {
+  color: $primary;
+  margin-right: 15px;
+}
+.phone{
+  color: white;
+  position: relative;
+  text-decoration: none;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: $clr-text;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 0;
+    right: 0;
+    left: auto;
+  }
+}
+h5 {
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+
+.contact-item p {
+  color: $clr-text;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+.place {
+  display: flex;
+  justify-content: center; /* Центрує блоки */
+  align-items: stretch; /* Додає однакову висоту */
+  flex-wrap: wrap;
+  gap: 30px; /* Додає відступи */
+}
+
+.contact-info {
+  flex: 1 1 calc(33.33% - 20px); /* Робить всі блоки однаковими */
+  min-width: 350px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  background-color: $clr-background;
+  border-radius: 6px;
+  padding: 20px 30px;
+  border: 1px solid $clr-border;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+}
+
+.form-block {
+  margin: 70px 10px 100px;
+
+}
+
+.btn-contact {
+  display: block;
+  width: 50%;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  background: $primary;
+  border: 2px solid $primary;
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  background: transparent;
+  color: $primary;
+}
+
+.btn-contact[disabled] {
+  background: $primary !important;
+  color: white !important;
+  opacity: 1 !important;
+  border: 2px solid $primary !important;
+}
+
+.btn-contact[disabled]:hover {
+  background: transparent !important;
+  color: $primary !important;
+}
+
+
+
+input, .message {
+  font-size: 16px;
+  height: 54px;
+  min-width: 300px;
+  color: #fff;
+  border: 1px solid $clr-border;
+  background-color: $clr-background;
+  line-height: 51px;
+  padding: 0 20px;
+  border-radius: 6px;
+  margin: 20px 30px 20px 0;
+
+}
+
+.message {
+  height: 105px;
+  min-width: 635px;
+}
+
+::ng-deep input:focus,
+::ng-deep textarea:focus {
+  border: 1px solid $primary !important;
+  outline: none;
+
+}
+
+.map-block img {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+input.ng-invalid.submitted,
+textarea.ng-invalid.submitted {
+  border: 1px solid red !important;
+}
+
+/* Додаємо стиль для всіх інпутів, якщо форма позначена як submitted */
+.submitted input.ng-invalid,
+.submitted textarea.ng-invalid {
+  border: 1px solid red !important;
+}

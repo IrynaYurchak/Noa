@@ -1,0 +1,45 @@
+@import '../../shared/styles/variables';
+
+.container {
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.2em;
+  font-weight: 500;
+  margin-top: 70px;
+}
+
+.team {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+}
+
+.team img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out, object-position 0.5s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+
+  &:hover {
+    transform: scale(1.2);
+    object-position: center 40%;
+  }
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+h5:hover{
+  color: $primary;
+}

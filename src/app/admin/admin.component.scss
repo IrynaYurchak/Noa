@@ -1,0 +1,31 @@
+@import '../shared/styles/variables';
+active{
+  color: $primary;
+}
+.btn {
+  color: $clr-gray;
+  border: 1px solid $primary;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 30px;
+  border-radius: 5px
+;
+}
+
+.btn:hover{
+  background-color: $primary;
+  border-color: $clr-border;
+  color: white;
+}
+
+.btn.active {
+  background-color: $primary;
+  color: white;
+  border-color: $primary;
+}
+
+.btn-exit {
+  margin-left: 25px;
+  padding: 10px 35px;
+}
