@@ -1,43 +1,21 @@
 @import '../../shared/styles/variables';
+@import '../../shared/styles/base';
 .btn-addCategory,
 .btn-save {
   background-color: $primary;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px 15px;
   width: 350px;
   color: white;
   margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
-  color: white;
-}
 
 .container-fluid {
   width: 100%;
   padding: 0;
   margin-left: 70px;
 
-}
-
-.table th,
-.table td {
-  vertical-align: middle;
-  text-align: center;
-}
-
-.table img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
-.table {
-  width: 90%;
-  table-layout: fixed;
 }
 
 .btn-action {
@@ -56,10 +34,12 @@ table {
 
 input {
   border-radius: 5px;
+  border: none;
   padding: 15px;
   font-size: 25px;
   width: 360px;
   margin-top: 28px;
+  background-color: $clr-background;
 }
 
 *:focus {
@@ -78,6 +58,6 @@ input {
   height: 100px;
   border-radius: 5px;
   border: 1px solid rgb(189, 188, 188);
-  margin: 30px 0px;
+  margin: 30px 0;
   padding: 10px
 }

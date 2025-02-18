@@ -1,1 +1,23 @@
-<p>autorization-admin works!</p>
+<div class="auth-content">
+  <h3 class="text-center fs-2 fw-bold mt-5">Вхід в кабінет</h3>
+  <form [formGroup]="loginForm" class="auth-form">
+    <div class="input-content">
+      <input formControlName="email" type="email" placeholder="*Ваш email"/>
+<!--      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">-->
+<!--        Email is required-->
+<!--      </mat-error>-->
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+        Please enter a valid email
+      </mat-error>
+      <input formControlName="password" type="password" placeholder="*Ваш пароль"/>
+<!--      <mat-error *ngIf=" loginForm.get('password')?.hasError('required')">-->
+<!--        Password is required-->
+<!--      </mat-error>-->
+
+      <button color="primary" class="auth-button" type="submit" [disabled]="loginForm.invalid"
+              (click)="loginAdmin()">Увійти в кабінет
+      </button>
+    </div>
+  </form>
+</div>
+

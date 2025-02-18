@@ -1,0 +1,34 @@
+<div class="container-personal mt-5">
+  <div class="form-title">
+    1. Особисті дані
+  </div>
+  <form [formGroup]="personalForm" class="=container">
+
+    <div class="row mb-3">
+      <div class="col-md-6 mb-2 mb-md-0 mt-3">
+        <input matInput formControlName="firstName" type="text" placeholder="*Ім'я" class="form-control" />
+      </div>
+      <div class="col-md-6 mt-3">
+        <input matInput formControlName="lastName" type="text" placeholder="*Прізвище" class="form-control" />
+      </div>
+    </div>
+
+    <div class="mb-3 mt-3">
+      <input matInput formControlName="phoneNumber" type="tel" placeholder="+38 (xxx) xxx xx xx" class="form-control" />
+    </div>
+    <div class="mb-3 mt-3">
+      <input matInput formControlName="email" type="email" placeholder="*Email" class="form-control" />
+    </div>
+  </form>
+  <div class="form-title">
+    2. Адреси
+  </div>
+<div class="d-flex justify-content-between mt-3">
+  <button class="btn-eddAddress text-uppercase" >додати адресу</button>
+  <button class="btn btn-save" (click)="saveChange()">зберегти зміни</button>
+</div>
+  <div>
+    <button class="btn btn-exit my-4" (click)="logout()">вихід</button>
+  </div>
+</div>
+

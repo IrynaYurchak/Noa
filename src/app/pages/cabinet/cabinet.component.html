@@ -1,0 +1,8 @@
+<nav class="nav mt-5 justify-content-around menu">
+  <button class="btn-menu text-uppercase" type="button" [routerLink]="['personal']" routerLinkActive="active">особисті дані</button>
+  <button class="btn-menu text-uppercase" type="button" [routerLink]="['orders']" routerLinkActive="active">історія замовлень</button>
+  <button class="btn-menu text-uppercase" type="button" [routerLink]="['favorite']" routerLinkActive="active">улюблені</button>
+  <button class="btn-menu text-uppercase" type="button" [routerLink]="['change']" routerLinkActive="active">зміна паролю</button>
+</nav>
+
+<router-outlet></router-outlet>

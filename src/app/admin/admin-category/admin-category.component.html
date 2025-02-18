@@ -1,5 +1,5 @@
 <div class="container custom-ml">
-  <button class="btn-addCategory fw-bold fs-4" (click)="add()">ДОДАТИ КАТЕГОРІЮ</button>
+  <button class="btn-addCategory fs-4" (click)="add()">Додати категорію</button>
 
   <div class="add-block" *ngIf="addBlock">
     <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">

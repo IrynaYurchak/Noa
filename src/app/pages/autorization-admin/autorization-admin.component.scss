@@ -1,0 +1,58 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+
+.auth-content{
+  color: white;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 80vw !important;
+  min-height: 100% !important;
+  border-radius: 5px !important;
+  border: $clr-border;
+  overflow: visible !important;
+  visibility: visible !important;}
+
+
+.auth-form {
+  width: 100%;
+}
+
+h3 {
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width: 100% !important;
+  padding: 10px 20px !important;
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid $clr-border !important;
+margin-bottom: 20px;
+}
+
+input:focus {
+  outline: 2px solid $primary !important;
+}
+
+
+.auth-button {
+  color: white;
+  background-color: $primary;
+  padding: 15px;
+  width: 300px;
+  margin: 10px auto;
+
+}
+
+.auth-button:hover {
+  color: $primary;
+  background: transparent;
+  border: 2px solid $primary;
+}

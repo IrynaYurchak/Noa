@@ -1,1 +1,93 @@
-<p>auth-dialog works!</p>
+<div *ngIf="newUser" class="dialog-content">
+  <h3 class="text-center fs-2 fw-bold mt-5">Вхід в кабінет</h3>
+  <form [formGroup]="loginForm" class="auth-form">
+    <div class="input-content">
+      <input matInput formControlName="email" type="email" placeholder="*Ваш email"/>
+<!--      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">-->
+<!--        Email is required-->
+<!--      </mat-error>-->
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+        Please enter a valid email
+      </mat-error>
+
+      <input matInput formControlName="password" type="password" placeholder="*Ваш пароль"/>
+<!--      <mat-error *ngIf=" loginForm.get('password')?.hasError('required')">-->
+<!--        Password is required-->
+<!--      </mat-error>-->
+
+      <button color="primary" class="auth-button" type="submit" [disabled]="loginForm.invalid"
+              (click)="loginUser()">Увійти в кабінет
+      </button>
+    </div>
+    <div class="d-flex justify-content-between mt-5">
+      <button class="btn-forgot" type="button" (click)="register()">Забули пароль?</button>
+      <button class="btn-register" type="button" (click)="register()">Зареєструватися</button>
+    </div>
+
+  </form>
+</div>
+
+<div *ngIf="!newUser" class="modal-body">
+  <div class="text-center fs-2 fw-bold mt-3 mb-4">Зареєструватися</div>
+  <form [formGroup]="registerForm" class="auth-form container">
+
+    <!-- Ім'я та Прізвище в одному рядку -->
+    <div class="row mb-3">
+      <div class="col-md-6 mb-2 mb-md-0">
+        <input matInput formControlName="firstName" type="text" placeholder="*Ім'я" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <input matInput formControlName="lastName" type="text" placeholder="*Прізвище" class="form-control" />
+      </div>
+    </div>
+
+    <!-- Телефон -->
+    <div class="mb-3">
+      <input matInput formControlName="phoneNumber" type="tel" placeholder="+38 (xxx) xxx xx xx" class="form-control" />
+<!--      <mat-error *ngIf="registerForm.get('phone')?.hasError('required')">Телефон обов'язковий</mat-error>-->
+      <mat-error *ngIf="registerForm.get('phone')?.hasError('pattern')">Формат телефону невірний</mat-error>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <input matInput formControlName="email" type="email" placeholder="*Email" class="form-control" />
+<!--      <mat-error *ngIf="registerForm.get('email')?.hasError('required')">Email обов'язковий</mat-error>-->
+      <mat-error *ngIf="registerForm.get('email')?.hasError('email')">Введіть коректний Email</mat-error>
+    </div>
+
+    <!-- Паролі в одному рядку -->
+    <div class="row mb-3">
+      <div class="col-md-6 mb-2 mb-md-0">
+        <input matInput formControlName="password" type="password" placeholder="*Пароль" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <input matInput formControlName="confirmationPassword" type="password" placeholder="*Підтвердження паролю" class="form-control" />
+      </div>
+      <mat-error *ngIf="checkVisibilityError('confirmationPassword', 'matchError')">
+        Паролі не співпадають
+      </mat-error>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="termsCheckbox">
+      <label class="form-check-label check-text" for="termsCheckbox">Хочу отримувати пропозиції на email.</label>
+    </div>
+
+    <!-- Стандартний Bootstrap чекбокс -->
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="termsCheckbox1">
+      <label class="form-check-label check-text" for="termsCheckbox1">Я погоджуюсь з <span>Правилами користування</span></label>
+    </div>
+    <!-- Кнопка реєстрації -->
+
+    <button color="primary" class="auth-button mt-4 mb-4" type="submit"
+            [disabled]="registerForm.invalid"
+            (click)="checkRegisterForm()">Зареєструватися</button>
+
+    <!-- Посилання для переходу на вхід -->
+    <div class="d-flex m-auto ">
+      <p>Вже зареєстровані?</p>
+      <p class="ms-2 enter" (click)="register()" style="cursor: pointer;">Увійти</p>
+    </div>
+  </form>
+</div>

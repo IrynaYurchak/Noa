@@ -1,0 +1,17 @@
+@import '../../../shared/styles/variables';
+@import '../../../shared/styles/base';
+.container-personal{
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+}
+.btn-eddAddress{
+  background-color: white;
+  color: $primary;
+  padding: 15px 30px;
+  border: 1px solid $primary;
+}
+.btn-eddAddress:hover{
+  background-color: $primary;
+  color: white;
+}

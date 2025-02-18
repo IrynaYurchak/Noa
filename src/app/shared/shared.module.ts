@@ -9,6 +9,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from "@angular/material/expansion";
+import {MatCheckboxModule} from '@angular/material/checkbox'
 
 const MATERIAL=[MatButtonModule,
   MatCardModule,
@@ -20,7 +21,8 @@ const MATERIAL=[MatButtonModule,
   MatSelectModule,
   MatTableModule,
   MatButtonModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatCheckboxModule
 ]
 @NgModule({
   declarations:[],

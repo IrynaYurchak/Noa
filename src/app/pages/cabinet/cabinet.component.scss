@@ -1,0 +1,23 @@
+@import '../../shared/styles/variables';
+
+.menu {
+  border: 1px, solid, $primary;
+  color: $clr-text;
+  background-color: $clr-background;
+  max-width:700px;
+  margin: 0 auto;
+  padding: 5px;
+
+}
+.btn-menu{
+  color: white;
+  background-color: transparent;
+  border-radius:5px;
+  border:none;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-menu.active{
+ background-color: $primary;
+}

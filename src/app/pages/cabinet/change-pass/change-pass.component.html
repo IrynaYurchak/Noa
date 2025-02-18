@@ -1,0 +1,19 @@
+<div class="m-5 change m-auto">
+  <div class="title my-5 mb-3">Зміна паролю</div>
+  <form [formGroup]="passwordForm" class="password-form">
+
+    <div class="row">
+      <input matInput formControlName="passwordOld" class="my-2 py-2" type="password" placeholder="*Ваш поточний пароль"/>
+      <input matInput formControlName="password" class="my-2 py-2" type="password" placeholder="*Новий пароль"/>
+      <input matInput formControlName="confirmationPassword" class="my-2 py-2" type="password" placeholder="*Повторіть пароль"/>
+      <mat-error *ngIf="checkVisibilityError('confirmationPassword', 'matchError')">
+        Ваші паролі не співпадають
+      </mat-error>
+    </div>
+
+    <button class="btn btn-save" type="submit" (click)="saveChange()">Зберегти зміни
+    </button>
+
+  </form>
+</div>
+

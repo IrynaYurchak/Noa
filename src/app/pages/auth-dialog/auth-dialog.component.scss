@@ -1,0 +1,144 @@
+@import '../../shared/styles/variables';
+//@import '../../shared/styles/base';
+
+.dialog-content {
+  color: black;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.auth-form .d-flex {
+  margin-top: auto;
+}
+
+
+h3 {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+
+input, .form-control, input[matInput] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  outline: none;
+  box-shadow: none;
+}
+
+input:focus,
+.form-control:focus,
+input[matInput]:focus {
+  border-color: $primary !important;
+  color: $primary;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+  color: $primary;
+  outline: none;
+  box-shadow: none;
+  border-color: $primary;
+}
+
+.mat-input-element:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: $primary !important;
+}
+
+/* Інпути з помилкою */
+input.ng-invalid.ng-touched, .form-control.ng-invalid.ng-touched {
+  border-color: red !important;
+  color: red !important;
+}
+
+.auth-button {
+  color: white;
+  background-color: $primary;
+  padding: 15px;
+}
+
+.auth-button:hover {
+  color: $primary;
+  background: transparent;
+  border: 2px solid $primary;
+}
+
+.btn-forgot,
+.btn-register {
+  color: $primary;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-register {
+  color: #404040;
+}
+
+.btn-forgot, .btn-register, span{
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: $primary;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Чекбокси */
+.form-check-input {
+  background-color: #2d7d7d;
+  border: none;
+  cursor: pointer;
+ padding: 0;
+
+}
+.check-text
+{
+  color: #5c5752;;
+}
+.form-check-input:checked {
+  background-color: black;
+}
+
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+span, .enter{
+  color: $primary;
+}
+

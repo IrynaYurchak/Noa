@@ -2,14 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {ICategoryResponse} from '../../shared/interfaces/category.interface';
 import {CategoryService} from "../../shared/services/category/category.service";
+import { ICategoryResponse } from '../../shared/interfaces/category/category.interface';
 
 @Component({
   selector: 'app-admin-category',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './admin-category.component.html',
   styleUrl: './admin-category.component.scss'
 })

@@ -1,45 +1,53 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid pattern">
-    <a class="navbar-brand ms-4 my-3" [routerLink]="['/']"><img src="assets/img/noa_logo.png" height="48"
-                                                                width="135"></a>
+    <a class="navbar-brand ms-4 my-3" [routerLink]="['/']">
+      <img src="assets/img/noa_logo.png" height="48" width="135">
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link item me-3  " aria-current="page" (click)=" openMenu()">Меню</a>
+          <a class="nav-link item me-3" (click)="openMenu()">Меню</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/delivery']" class="nav-link item  me-3" aria-current="page">Доставка</a></li>
-
-        <li class="nav-item">
-          <a [routerLink]="['/about']" class="nav-link item me-3" aria-current="page">Про нас</a>
-        </li>
-
-        <li class="nav-item">
-          <a [routerLink]="['/vacancy']" class="nav-link item" aria-current="page">Вакансії</a>
+          <a [routerLink]="['/delivery']" class="nav-link item me-3">Доставка</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/contacts']" class="nav-link item" aria-current="page">Контакти</a>
+          <a [routerLink]="['/about']" class="nav-link item me-3">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/vacancy']" class="nav-link item">Вакансії</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/contacts']" class="nav-link item">Контакти</a>
         </li>
       </ul>
     </div>
-    <div>
 
+    <div class="d-flex align-items-center user-actions">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <li class="nav-item">
-          <a [routerLink]="['/admin']" class="nav-link item" aria-current="page">Адмін</a>
+        <li class="nav-item user-auth" *ngIf="!isAuthenticated">
+          <a class="nav-link d-flex align-items-center" (click)="openAuth()">
+            <mat-icon>person_outline</mat-icon>
+            <span class="ms-2">Вхід | Реєстрація</span>
+          </a>
         </li>
 
-
-        <li class="nav-item">
-          <a [routerLink]="['/about']" class="nav-link" aria-current="page">Вхід|Реєстрація</a>
+        <li class="nav-item user-auth" *ngIf="isAuthenticated">
+          <a [routerLink]="['/' + userRoleUrl]" class="nav-link d-flex align-items-center">
+            <mat-icon>person_outline</mat-icon>
+            <span class="ms-2">{{ userName }}</span>
+          </a>
         </li>
-        <li class="nav-item">
-          <a [routerLink]="['/about']" class="nav-link" aria-current="page">грн</a>
+
+        <li class="nav-item currency">
+          <a [routerLink]="['/about']" class="nav-link">грн</a>
         </li>
       </ul>
     </div>

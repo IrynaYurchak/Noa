@@ -1,4 +1,4 @@
-
+@import '../../shared/styles/variables';
 .link {
   color: $primary;
   position: relative;
@@ -19,4 +19,56 @@
     right: 0;
     left: auto;
   }
+}
+table {
+  width: 100%;
+  color: white;
+  background-color: $clr-background;
+}
+.table {
+  width: 90%;
+  table-layout: fixed;
+  background-color: $clr-background!important;
+}
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+input, textarea{
+  background: $clr-background;
+  border: 1px solid $clr-border;
+  color: white !important;;
+}
+input:focus, textarea:focus{
+  outline: none;
+  border: 1px solid $primary;
+  background: $clr-background !important;
+}
+input::placeholder,
+.form-control::placeholder,
+input[matInput]::placeholder {
+  color: white !important;}
+
+input.ng-invalid.ng-touched, .form-control.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border-color: red !important;
+  color: red !important;
+}
+.btn{
+  padding: 15px 30px;
+  background-color: $primary;
+  color: white;
+  border: 1px solid $primary;
+  text-transform: uppercase;
+}
+.btn:hover, {
+  background-color: transparent;
+  color: $primary;
 }
