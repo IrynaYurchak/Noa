@@ -1,6 +1,6 @@
 <div class="menu-dialog">
-  <div class="menu-item ">
-    <img src="" width="150" height="150">
-    <p class="mt-2"></p>
+  <div class="menu-item" *ngFor="let category of userCategories">
+    <img [src]="category.imgPath" [routerLink]="['/product/'+ category.path]" routerLinkActive="active" (click)="closeMenu()" width="150" height="150">
+    <p [routerLink]="['/product/'+ category.path]" (click)="closeMenu()" class="mt-2">{{category.name}}</p>
   </div>
 </div>

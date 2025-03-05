@@ -20,28 +20,42 @@
     left: auto;
   }
 }
-table {
+//table {
+//  width: 100%;
+//  color: white;
+//  background-color: $clr-background;
+//}
+//.table {
+//  width: 90%;
+//  table-layout: fixed;
+//  background: $clr-background !important;
+//}
+//.table th,
+//.table td {
+//  vertical-align: middle;
+//  text-align: center;
+//}
+//
+//.table img {
+//  max-width: 100%;
+//  height: auto;
+//  display: block;
+//  margin: 0 auto;
+//}
+
+::ng-deep .table {
+  background-color: $clr-background !important;
+}
+
+::ng-deep .table th,
+::ng-deep .table td {
+  background-color: $clr-background !important;
   width: 100%;
   color: white;
-  background-color: $clr-background;
-}
-.table {
-  width: 90%;
-  table-layout: fixed;
-  background-color: $clr-background!important;
-}
-.table th,
-.table td {
   vertical-align: middle;
   text-align: center;
 }
 
-.table img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 input, textarea{
   background: $clr-background;
   border: 1px solid $clr-border;

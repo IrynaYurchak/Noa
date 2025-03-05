@@ -1,4 +1,8 @@
 @import 'app/shared/styles/variables';
+//h1, h2, h3{
+//  margin: 0;
+//  padding: 0;
+//}
 .global-background {
   position: fixed;
   top: 0;
@@ -222,4 +226,10 @@ html, body {
 
 input, button{
   border-radius: 5px;
+}
+h1, h2, h3{
+  color:white;
+}
+p, li{
+  color: $clr-text;
 }

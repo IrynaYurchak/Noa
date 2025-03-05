@@ -16,12 +16,14 @@ import {PersonalComponent} from "./pages/cabinet/personal/personal.component";
 import {FavoriteComponent} from "./pages/cabinet/favorite/favorite.component";
 import {OrdersComponent} from "./pages/cabinet/orders/orders.component";
 import {ChangePassComponent} from "./pages/cabinet/change-pass/change-pass.component";
+import {ProductInfoComponent} from "./pages/product/product-info/product-info.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'product/:category', component: ProductComponent},
+  {path: 'product/:category/:id', component: ProductInfoComponent},
   {path: 'delivery', component: DeliveryComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contacts', component: ContactsComponent},
